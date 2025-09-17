@@ -87,7 +87,19 @@ export interface EmailContact {
  
      return results;
  }
+
+ // https://susomejias.dev/design-pattern-criteria/ read about the criteria here which helped me write the find friends function 
  
  console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
  console.log(findFriends(friends, (friend) => friend.age < 35));
  
+
+ function addInterest(friend: Friend, interest: string): string[] {
+     if (!friend.interests) {
+         friend.interests = [];
+     }
+     friend.interests.push(interest);
+     return friend.interests;
+ }
+
+ console.log(addInterest(friends[0], 'Politics'));
