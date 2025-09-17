@@ -1,11 +1,23 @@
-interface Friend {
+
+import {Friend, Colleague, ColleagueHistory } from './myTypes'
+
+
+
+
+
+
+
+
+/*interface Friend {
     name: string;
     phone: string;
     age: number;
     course: string;
     studyyear: number
 }
-  
+  */
+
+
 const friend1 :Friend= {
     name: "Paul Fleming",
     phone: "087-12345",
@@ -21,25 +33,27 @@ const friend1 :Friend= {
     course: "Game Development",
     studyyear: 4
   };
+
+  export const friends = [friend1, friend2];
+ //const friends :Friend[] = [friend1, friend2];
+ // console.log(friends[1]);
   
-  const friends :Friend[] = [friend1, friend2];
-  console.log(friends[1]);
-  
-interface Colleague  {
+/*interface Colleague  {
     name : string;
     department: string;
-    contact: Contact;
+        contact: {
+      email: string;
+      extension: number
+    } 
 }
   
-interface Contact {
-    email: string;
-    extension: number;
-  }
+
 
   interface ColleagueHistory {
     current: Colleague[],
     former: Colleague[]
   }
+*/
 
   const colleague1 :Colleague= {
     name: "Ralph Graham",
@@ -77,5 +91,5 @@ interface Contact {
   };
   
   
-  console.log(colleagues.current[0]);
+ // console.log(colleagues.current[0]);
   
