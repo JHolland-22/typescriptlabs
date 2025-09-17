@@ -2,9 +2,9 @@
 export interface Friend {
     name: string;
     phone: string;
+    dob? : Date;   // New
     age: number;
-    course: string;
-    studyyear: number
+    interests? : string[]   // New
 }
 
 export interface Colleague {
