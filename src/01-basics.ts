@@ -36,6 +36,11 @@ interface Contact {
     extension: number;
   }
 
+  interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
+
   const colleague1 :Colleague= {
     name: "Ralph Graham",
     department: "Engineering",
@@ -64,11 +69,13 @@ interface Contact {
   };
 
 
-  // error on current will be fixed in next commit
-  const colleagues :Colleague[] = {
+
+  
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
+  
   
   console.log(colleagues.current[0]);
   
